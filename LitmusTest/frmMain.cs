@@ -67,7 +67,6 @@ namespace LitmusApp
         private void frmMain_Load(object sender, EventArgs e)
         {
             InitializeControls();
-
         }
        
         private void WbMail_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -92,18 +91,7 @@ namespace LitmusApp
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-            //using (WebClient client = new WebClient())
-            //{
-            //    client.Headers.Add("client_id", "MzBycPYSY5px0yM6MFDcLpX1uVxN0lzA");
-            //    string url = "https://testytenant.auth0.com/v2/logout?";
-             
-            //    client.BaseAddress = "https://testytenant.auth0.com/v2/logout?";
-
-            //    var response = client.DownloadString(url);
-
-            //    Console.WriteLine(response.ToString());
-            //}
+            wbMail.Navigate("https://google.com/accounts/logout");           
         }
 
         #endregion
