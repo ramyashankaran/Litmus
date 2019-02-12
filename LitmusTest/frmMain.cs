@@ -79,17 +79,31 @@ namespace LitmusApp
                 if (documentCounter == 15)
                 {
                     PrintScreen();
-                    tsbPrint.Enabled = true;
-                }
-                
+                }              
 
             }
             
         }
-                
-        private void tsbPrint_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             PrintScreen();
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            //using (WebClient client = new WebClient())
+            //{
+            //    client.Headers.Add("client_id", "MzBycPYSY5px0yM6MFDcLpX1uVxN0lzA");
+            //    string url = "https://testytenant.auth0.com/v2/logout?";
+             
+            //    client.BaseAddress = "https://testytenant.auth0.com/v2/logout?";
+
+            //    var response = client.DownloadString(url);
+
+            //    Console.WriteLine(response.ToString());
+            //}
         }
 
         #endregion
@@ -120,7 +134,9 @@ namespace LitmusApp
             return filePath;
         }
 
+
         #endregion
+
 
     }
 }
