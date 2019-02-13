@@ -20,13 +20,13 @@ namespace LitmusApp
 
         private Timer emailTimer = null;
         private string folderPath = @"C:\GmailImages";
-        private int documentCounter = 0;
         string userName = string.Empty;
-        
+      
    
         #endregion
 
         #region Constructor
+
         public frmMain(string userName)
         {
            
@@ -64,6 +64,7 @@ namespace LitmusApp
         #endregion
 
         #region EventHandlers
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             InitializeControls();
@@ -71,25 +72,38 @@ namespace LitmusApp
        
         private void WbMail_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            if (wbMail.ReadyState == WebBrowserReadyState.Complete && !wbMail.IsBusy)
+           
+            if (wbMail.ReadyState == WebBrowserReadyState.Complete && !wbMail.IsBusy && e.Url.Host == "accounts.google.com")
              {
-                documentCounter++;
+    
+                PrintScreen();
 
-                if (documentCounter == 15)
-                {
-                    PrintScreen();
-                }              
-
+                wbMail.DocumentCompleted -= WbMail_DocumentCompleted;
             }
+
+            
             
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void pbPrint_Click(object sender, EventArgs e)
         {
             PrintScreen();
         }
 
-        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void pbPrint_MouseEnter(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.BackColor = Color.Red;
+        }
+
+
+        private void pbPrint_MouseLeave(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.BackColor = Color.LightGray;
+        }
+
+        private void frmMain_FormClosedAsync(object sender, FormClosedEventArgs e)
         {
             wbMail.Navigate("https://google.com/accounts/logout");           
         }
@@ -100,13 +114,22 @@ namespace LitmusApp
 
         private void PrintScreen()
         {
+            string filePath = string.Empty;
+
             using (Bitmap bmp = new Bitmap(wbMail.Width, wbMail.Height))
             {
                 Image img = wbMail.DrawToImage();
 
-                string filePath = GetFilePath();
+                filePath = GetFilePath();
 
                 img.Save(filePath);
+            }
+ 
+            if(File.Exists(filePath))
+            {
+                string msg = "An image of your inbox has been saved at - " + folderPath;
+
+                MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -122,9 +145,6 @@ namespace LitmusApp
             return filePath;
         }
 
-
         #endregion
-
-
     }
 }

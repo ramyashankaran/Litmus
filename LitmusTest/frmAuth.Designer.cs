@@ -43,9 +43,9 @@
             // 
             this.pbSignIn.BackgroundImage = global::LitmusTest.Properties.Resources.gsignin;
             this.pbSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSignIn.Location = new System.Drawing.Point(90, 261);
+            this.pbSignIn.Location = new System.Drawing.Point(101, 192);
             this.pbSignIn.Name = "pbSignIn";
-            this.pbSignIn.Size = new System.Drawing.Size(248, 62);
+            this.pbSignIn.Size = new System.Drawing.Size(201, 48);
             this.pbSignIn.TabIndex = 4;
             this.pbSignIn.TabStop = false;
             this.pbSignIn.Click += new System.EventHandler(this.pbSignIn_Click);
@@ -53,7 +53,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::LitmusTest.Properties.Resources.iconfinder_icon_ios7_plus_outline_211802;
-            this.pictureBox3.Location = new System.Drawing.Point(206, 111);
+            this.pictureBox3.Location = new System.Drawing.Point(192, 109);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 32);
             this.pictureBox3.TabIndex = 3;
@@ -63,9 +63,9 @@
             // 
             this.pictureBox2.BackgroundImage = global::LitmusTest.Properties.Resources.iconfinder_Camera_2431363;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(260, 78);
+            this.pictureBox2.Location = new System.Drawing.Point(228, 81);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 108);
+            this.pictureBox2.Size = new System.Drawing.Size(85, 83);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -74,9 +74,9 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 81);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 83);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(441, 416);
+            this.ClientSize = new System.Drawing.Size(412, 339);
             this.Controls.Add(this.pbSignIn);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

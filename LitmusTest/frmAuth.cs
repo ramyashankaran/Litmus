@@ -14,6 +14,8 @@ namespace LitmusApp
 {
     public partial class frmAuth : Form
     {
+        private bool authInProgress = false;
+
         #region Constructor
 
         public frmAuth()
@@ -40,6 +42,8 @@ namespace LitmusApp
 
             extraParameters.Add("audience", string.Empty);
 
+            authInProgress = true;
+
             InitializeEmailWindow(await client.LoginAsync(extraParameters: extraParameters));
          
         }
@@ -55,6 +59,8 @@ namespace LitmusApp
                 frmMain emailForm = new frmMain(loginResult.User.Identity.Name);
                 emailForm.ShowDialog();
             }
+
+            authInProgress = false;
         }
 
         #endregion
@@ -63,7 +69,8 @@ namespace LitmusApp
 
         private void pbSignIn_Click(object sender, EventArgs e)
         {
-            StartAuthorizationAsync();
+            if(!authInProgress)
+              StartAuthorizationAsync();
         }
 
         #endregion
