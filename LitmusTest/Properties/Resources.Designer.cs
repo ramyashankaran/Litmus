@@ -113,6 +113,26 @@ namespace LitmusTest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Camera_24313632 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Camera_24313632", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Camera_24313633 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Camera_24313633", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_icon_ios7_plus_outline_211802 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_icon-ios7-plus-outline_211802", resourceCulture);

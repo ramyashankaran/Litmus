@@ -67,12 +67,13 @@ namespace LitmusApp
 
         #region Event Handlers
 
-        private void pbSignIn_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
-            if(!authInProgress)
-              StartAuthorizationAsync();
+            if (!authInProgress)
+                StartAuthorizationAsync();
         }
-
         #endregion
+
+
     }
 }
